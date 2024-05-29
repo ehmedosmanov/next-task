@@ -17,7 +17,9 @@ const Product = ({ id, title, image, description, price }: ProductProps) => {
                 <Image width={100} height={100} src={image} alt={title} className="object-contain" />
             </div>
             <div className="mt-2 text-center">
-                <Link href={`/products/${id}-${slugify(title)}`} className="truncate text-lg font-semibold">{title}</Link>
+                <Link href={`/products/${id}-${slugify(title)}`} className="truncate w-2/12 overflow-hidden text-lg font-semibold">
+                    <h2 className="truncate block">{title}</h2>
+                </Link>
                 <p className="truncate">{description}</p>
                 <span className="font-bold text-lg">{price}</span>
             </div>
